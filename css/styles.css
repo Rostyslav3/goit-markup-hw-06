@@ -198,7 +198,17 @@ body {
   padding-bottom: 0px;
 }
 .visually-hiden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  
 }
 
 .advantages-item + .advantages-item {
@@ -789,7 +799,7 @@ textarea:focus {
 }
 
 .checkbox-label {
-  margin-left: 8px;
+  margin-left: 22px;
   cursor: pointer;
   font-family: var(--primary-text-color);
   font-weight: 400;
@@ -831,6 +841,9 @@ textarea:focus {
   border: 2px solid var(--accent-color);
   fill: #ffffff;
 }
+.checkbox:focus + .checkbox-label > .check-icon {
+  border-color: var(--accent-color);
+  }
 
 .checkbox-link {
   color: var(--accent-color);
